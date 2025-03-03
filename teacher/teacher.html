@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Teacher Dashboard</h2>
+        <button id="logout">Logout</button>
+        
+        <h3>Add Available Slot</h3>
+        <form id="addSlotForm">
+            <input type="text" id="slot" placeholder="YYYY-MM-DD HH:MM" required>
+            <button type="submit">Add Slot</button>
+        </form>
+        
+        <h3>Appointment Requests</h3>
+        <div id="appointmentRequests"></div>
+        
+        <h3>Messages</h3>
+        <div id="messages"></div>
+        
+        <h3>All Appointments</h3>
+        <div id="allAppointments"></div>
+    </div>
+    
+    <script src="/teacher/teacher.js"></script>
+</body>
+</html>

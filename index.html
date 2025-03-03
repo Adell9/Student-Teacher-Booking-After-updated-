@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <script type="module" src="/firebase.js"></script>
+    <script type="module">
+        import { loginUser } from "./firebase.js";
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            loginUser(email, password);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Hey, Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/register/register.html">Register as Student</a></p>
+        <p>Do You Want To add A Teacher? <a href="/admin/admin.html">Adding a Teacher</a></p>
+    </div>
+</body>
+</html>
