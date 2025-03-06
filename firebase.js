@@ -29,10 +29,10 @@ export async function registerUser(name, email, password, department, role) {
             department,
             approved: role === "student" ? false : true
         });
-        alert("تم التسجيل بنجاح");
+        alert("Registration has been completed successfully.");
 
     } catch (error) {
-        alert("خطأ في التسجيل: " + error.message);
+        alert("Registration error: " + error.message);
     }
 }
 
@@ -49,14 +49,14 @@ export async function loginUser(email, password) {
             window.location.href = "/student/student.js";
         }
     } catch (error) {
-        alert("خطأ في تسجيل الدخول: " + error.message);
+        alert("Login error:  " + error.message);
     }
 }
 
 // ✅ تسجيل الخروج
 export function logoutUser() {
     signOut(auth).then(() => {
-        alert("تم تسجيل الخروج بنجاح.");
+        alert("You have successfully logged out.");
         //window.location.href = "index.html";
     });
 }
